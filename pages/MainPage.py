@@ -64,5 +64,4 @@ class MainPage(BasePage):
     def click_on_submit_button(self):
         """Click submit button function"""
         submit_button = self.find_element(Locators.SUBMIT_NEW_DEVICE_BUTTON)
-        # click that way, because checkbox is overlapped by label next to it
         self.driver.execute_script("arguments[0].click();", submit_button)
