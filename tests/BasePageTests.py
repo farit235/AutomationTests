@@ -5,8 +5,8 @@ from pages.MainPage import MainPage
 class TestBasePage:
 
     def test_search(self, browser):
-        name = "name_20"
-        device_id = "20"
+        name = "name_26"
+        device_id = "26"
         main_page = MainPage(browser)
         main_page.go_to_site()
         main_page.click_on_add_device_button()
@@ -19,7 +19,7 @@ class TestBasePage:
         assert device_id in lst
 
     def test_delete(self, browser):
-        device_id = "20"
+        device_id = "26"
         main_page = MainPage(browser)
         main_page.go_to_site()
         main_page.click_on_edit_device_button(device_id)

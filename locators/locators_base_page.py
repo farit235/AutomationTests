@@ -8,4 +8,4 @@ class BasePageLocators:
     INPUT_DEVICE_ID_FIELD = (By.XPATH, "//textarea[@id='device-upsert-modal__device-id-field']")
     SUBMIT_NEW_DEVICE_BUTTON = (By.XPATH, "//button[@type='button'][contains(.,'Submit')]")
     TABLE_SECOND_COLUMN = (By.XPATH, "//td[2]")
-    CHECKBOX_REGISTER_DEVICE = (By.XPATH, "//div[@class='custom-control custom-checkbox']/input[@name='registered']")
+    CHECKBOX_REGISTER_DEVICE = (By.XPATH, "//*[@name='registered']")
