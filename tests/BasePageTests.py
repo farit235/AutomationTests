@@ -19,7 +19,7 @@ class TestBasePage:
         assert device_id in lst
 
     def test_delete(self, browser):
-        device_id = "19"
+        device_id = "20"
         main_page = MainPage(browser)
         main_page.go_to_site()
         main_page.click_on_edit_device_button(device_id)

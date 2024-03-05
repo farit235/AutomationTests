@@ -35,8 +35,6 @@ class MainPage(BasePage):
     def checkout_unregistered(self):
         """Checkbox unregistered"""
         checkbox = self.find_element(Locators.CHECKBOX_REGISTER_DEVICE)
-        # click that way, because checkbox is overlapped by label next to it
-        # self.driver.execute_script("arguments[0].click();", checkbox)
         checkbox.click()
 
     def check_device_id(self):
@@ -69,4 +67,3 @@ class MainPage(BasePage):
         """Click submit button function"""
         submit_button = self.find_element(Locators.SUBMIT_NEW_DEVICE_BUTTON)
         self.driver.execute_script("arguments[0].click();", submit_button)
-        # return self.find_element(SearchLocators.LOCATOR_SUBMIT_NEW_DEVICE, time=2).click()
