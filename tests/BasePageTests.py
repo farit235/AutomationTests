@@ -26,5 +26,6 @@ class TestBasePage:
         main_page.checkout_unregistered()
         main_page.click_on_submit_button()
         main_page.click_delete_button(device_id)
+        time.sleep(1)
         lst = main_page.check_device_id()
         assert device_id not in lst
