@@ -17,7 +17,6 @@ class MainPage(BasePage):
         LOCATOR_EDIT_DEVICE_BUTTON = (By.XPATH, locator)
         edit_button = self.find_element(LOCATOR_EDIT_DEVICE_BUTTON)
         edit_button.click()
-        edit_button.click()
 
     def click_delete_button(self, device_id: str):
         """Delete row by button function"""
@@ -35,8 +34,6 @@ class MainPage(BasePage):
     def checkout_unregistered(self):
         """Checkbox unregistered"""
         checkbox = self.find_element(Locators.CHECKBOX_REGISTER_DEVICE)
-        # click that way, because checkbox is overlapped by label next to it
-        # self.driver.execute_script("arguments[0].click();", checkbox)
         checkbox.click()
 
     def check_device_id(self):
@@ -50,7 +47,6 @@ class MainPage(BasePage):
     def click_on_add_device_button(self):
         """Click add device button function"""
         a = self.find_element(Locators.NEW_DEVICE_ITEM_BUTTON)
-        a.click()
         a.click()
 
     def enter_device_name(self, name: str):
@@ -68,5 +64,5 @@ class MainPage(BasePage):
     def click_on_submit_button(self):
         """Click submit button function"""
         submit_button = self.find_element(Locators.SUBMIT_NEW_DEVICE_BUTTON)
+        # click that way, because checkbox is overlapped by label next to it
         self.driver.execute_script("arguments[0].click();", submit_button)
-        # return self.find_element(SearchLocators.LOCATOR_SUBMIT_NEW_DEVICE, time=2).click()
